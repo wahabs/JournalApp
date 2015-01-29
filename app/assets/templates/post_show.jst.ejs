@@ -1,0 +1,14 @@
+<div class="title">
+  <% if (editing === "title") { %>
+     <input type="text" name="post[title]" value="<%= post.escape("title") %>"></input>
+  <% } else { %>
+    <h2><%= post.escape("title") %></h2>
+  <% } %>
+</div>
+<div class="body"><br>
+    <% if (editing === "body") { %>
+       <textarea name="post[body]"><%= post.escape("body") %></textarea>
+    <% } else { %>
+      <%= post.escape("body") %>
+    <% } %>
+</div>
